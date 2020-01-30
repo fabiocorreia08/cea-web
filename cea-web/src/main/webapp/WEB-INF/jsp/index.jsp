@@ -26,17 +26,10 @@
 			  <a class="nav-link" href="${indexURL }" role="button">Home <span class="sr-only">(atual)</span></a>              
             </li>
             <li class="nav-item">            
-            	<s:url value="/empregadoErp/list/" var="listURL"/>
+            	<s:url value="/empregado/list/" var="listURL"/>
 				<a class="nav-link" href="${listURL }" role="button">Empregados ERP</a>              
             </li>  
-            <li class="nav-item">            
-            	<s:url value="/empregadoAd/list/" var="listURL"/>
-				<a class="nav-link" href="${listURL }" role="button">Empregados AD</a>              
-            </li>
-            <li class="nav-item">            
-            	<s:url value="/person/list/" var="listURL"/>
-				<a class="nav-link" href="${listURL }" role="button">Person</a>              
-            </li>                        
+                                   
           </ul> 
           
           <form class="form-inline mt-2 mt-md-0">

@@ -24,7 +24,7 @@ public class EmpregadoController {
 		
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public ModelAndView list() {
-		ModelAndView model = new ModelAndView("empregado_erp_list");
+		ModelAndView model = new ModelAndView("empregado_list");
 		List<Empregado> empregadoList = empregadoService.getAll();
 		model.addObject("empregadoList", empregadoList);
 		return model;
@@ -32,19 +32,19 @@ public class EmpregadoController {
 	
 	@RequestMapping(value="/add", method=RequestMethod.GET)
 	public ModelAndView add() {
-		ModelAndView model = new ModelAndView("empregado_erp_list");		
+		ModelAndView model = new ModelAndView("empregado_list");		
 		Empregado empregado = new Empregado();
 		model.addObject("empregadoForm", empregado);
-		model.setViewName("empregado_erp_form");		
+		model.setViewName("empregado_form");		
 		return model;
 	}	
 	
 	@RequestMapping(value="/update/{id}", method=RequestMethod.GET)
 	public ModelAndView edit(@PathVariable long id) {
-		ModelAndView model = new ModelAndView("empregado_erp_list");		
+		ModelAndView model = new ModelAndView("empregado_list");		
 		Empregado empregado = empregadoService.getById(id);
 		model.addObject("empregadoForm", empregado);
-		model.setViewName("empregado_erp_form");		
+		model.setViewName("empregado_form");		
 		return model;
 	}
 	
