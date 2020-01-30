@@ -27,7 +27,7 @@
             </li>
             <li class="nav-item">            
             	<s:url value="/empregado/list/" var="listURL"/>
-				<a class="nav-link" href="${listURL }" role="button">Empregados ERP</a>              
+				<a class="nav-link" href="${listURL }" role="button">Empregado</a>              
             </li>  
                                    
           </ul> 

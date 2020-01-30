@@ -27,7 +27,7 @@
             </li>
             <li class="nav-item active">            
             	<s:url value="/empregado/list/" var="listURL"/>
-				<a class="nav-link" href="${listURL }" role="button">Empregados ERP</a>              
+				<a class="nav-link" href="${listURL }" role="button">Empregado</a>              
             </li>  
                                    
           </ul> 
@@ -44,9 +44,9 @@
       <div class="container">
       	<br></br>
       	<br></br>
-        <s:url value="/empregadoErp/save" var="saveURL"/>
-		<h2>Empregado ERP</h2>
-		<form:form modelAttribute="empregadoErpForm" method="post" action="${saveURL }" cssClass="form">
+        <s:url value="/empregado/save" var="saveURL"/>
+		<h2>Empregado</h2>
+		<form:form modelAttribute="empregadoForm" method="post" action="${saveURL }" cssClass="form">
 			<form:hidden path="id" />
 			<div class="form-group">
 				<label>Nome</label>

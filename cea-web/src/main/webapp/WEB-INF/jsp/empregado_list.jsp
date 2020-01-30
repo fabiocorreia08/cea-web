@@ -30,7 +30,7 @@
             </li>
             <li class="nav-item active">            
             	<s:url value="/empregado/list/" var="listURL"/>
-				<a class="nav-link" href="${listURL }" role="button">Empregados ERP</a>              
+				<a class="nav-link" href="${listURL }" role="button">Empregado</a>              
             </li>  
                                    
           </ul> 
@@ -47,7 +47,7 @@
       <div class="container">
        <br></br>
       <br></br>
-      	<h2>Empregados ERP</h2>
+      	<h2>Empregados</h2>
       	<br></br>
       	<form class="form-inline">
 		  <div class="form-group mb-2">
@@ -71,25 +71,25 @@
 				<th scope="raw">Delete</th>
 			</thead>
 			<tbody>
-				<c:forEach items="${empregadoErpList}" var="empregadoErp">
+				<c:forEach items="${empregadoList}" var="empregado">
 					<tr>
-						<td>${empregadoErp.matricula }</td>
-						<td>${empregadoErp.nome }</td>						
-						<td>${empregadoErp.inicioFerias }</td>
-						<td>${empregadoErp.fimFerias }</td>
+						<td>${empregado.matricula }</td>
+						<td>${empregado.nome }</td>						
+						<td>${empregado.inicioFerias }</td>
+						<td>${empregado.fimFerias }</td>
 						<td>
-							<s:url value="/empregadoErp/update/${empregadoErp.id }" var="updateURL"/>
+							<s:url value="/empregado/update/${empregado.id }" var="updateURL"/>
 							<a class="btn btn-primary" href="${updateURL }" role="button">Update</a>
 						</td>
 						<td>
-							<s:url value="/empregadoErp/delete/${empregadoErp.id }" var="deleteURL"/>
+							<s:url value="/empregado/delete/${empregado.id }" var="deleteURL"/>
 							<a class="btn btn-primary" href="${deleteURL }" role="button">Delete</a>
 						</td>
 					</tr>				
 				</c:forEach>
 			</tbody>
 		</table>
-		<s:url value="/empregadoErp/add/" var="addURL"/>
+		<s:url value="/empregado/add/" var="addURL"/>
 		<a class="btn btn-primary" href="${addURL }" role="button">Novo Empregado ERP</a>		
       </div>
     </main>
